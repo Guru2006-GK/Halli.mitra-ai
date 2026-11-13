@@ -1,0 +1,8 @@
+{
+  "name": "Remix HALLI.MITRA — ROUTELESS: The Last Mile",
+  "description": "AI-powered rural student transportation ecosystem connecting villages and educational institutions with smart bus tracking, AI route optimization, dynamic allocation, alternative transit, student carpooling, ride sharing, and demand prediction.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

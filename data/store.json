@@ -1,0 +1,925 @@
+{
+  "users": [
+    {
+      "id": "u_student_1",
+      "name": "Ananya Gowda",
+      "email": "ananya@student.hallimitra.in",
+      "role": "student",
+      "villageId": "v_kirugavalu",
+      "collegeId": "c_pes_mandya",
+      "phone": "+91 98451 22410",
+      "emergencyContact": "+91 98451 00112 (Father)",
+      "departureTime": "07:45",
+      "verified": true,
+      "passwordHash": "demo"
+    },
+    {
+      "id": "u_admin_1",
+      "name": "Dr. Raghavendra Rao",
+      "email": "admin@hallimitra.in",
+      "role": "admin",
+      "phone": "+91 94480 55101",
+      "verified": true,
+      "passwordHash": "demo"
+    },
+    {
+      "id": "u_provider_1",
+      "name": "Mahesh Kumar",
+      "email": "mahesh@provider.hallimitra.in",
+      "role": "provider",
+      "phone": "+91 99002 77341",
+      "vehicleId": "pv_1",
+      "verified": true,
+      "passwordHash": "demo"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "v_kirugavalu",
+      "name": "Kirugavalu",
+      "kind": "village",
+      "lat": 12.4442,
+      "lng": 77.0185,
+      "populationStudents": 48,
+      "pickupPoint": "Kirugavalu Main Circle Shelter"
+    },
+    {
+      "id": "v_malavalli",
+      "name": "Malavalli",
+      "kind": "village",
+      "lat": 12.3849,
+      "lng": 77.0581,
+      "populationStudents": 64,
+      "pickupPoint": "Malavalli KSRTC Feeder Bay"
+    },
+    {
+      "id": "v_halaguru",
+      "name": "Halaguru",
+      "kind": "village",
+      "lat": 12.4165,
+      "lng": 77.2112,
+      "populationStudents": 38,
+      "pickupPoint": "Halaguru High School Gate"
+    },
+    {
+      "id": "v_koppa",
+      "name": "Koppa",
+      "kind": "village",
+      "lat": 12.6481,
+      "lng": 76.9612,
+      "populationStudents": 42,
+      "pickupPoint": "Koppa Sugar Factory Cross"
+    },
+    {
+      "id": "v_maddur",
+      "name": "Maddur Rural",
+      "kind": "village",
+      "lat": 12.5844,
+      "lng": 77.0439,
+      "populationStudents": 56,
+      "pickupPoint": "Maddur Bypass Student Stop"
+    },
+    {
+      "id": "v_pandavapura",
+      "name": "Pandavapura",
+      "kind": "village",
+      "lat": 12.4945,
+      "lng": 76.6698,
+      "populationStudents": 51,
+      "pickupPoint": "Pandavapura Railway Gate"
+    },
+    {
+      "id": "v_bannur",
+      "name": "Bannur",
+      "kind": "village",
+      "lat": 12.3338,
+      "lng": 76.8606,
+      "populationStudents": 44,
+      "pickupPoint": "Bannur Old Market Arch"
+    },
+    {
+      "id": "v_srirangapatna",
+      "name": "Srirangapatna East",
+      "kind": "village",
+      "lat": 12.4234,
+      "lng": 76.6822,
+      "populationStudents": 36,
+      "pickupPoint": "Wellesley Bridge Junction"
+    },
+    {
+      "id": "j_guthalu",
+      "name": "Guthalu Junction",
+      "kind": "junction",
+      "lat": 12.5015,
+      "lng": 76.9321,
+      "populationStudents": 18,
+      "pickupPoint": "Guthalu Ring Road Bay"
+    },
+    {
+      "id": "j_arakeshwar",
+      "name": "Arakeshwar Cross",
+      "kind": "junction",
+      "lat": 12.4561,
+      "lng": 76.8412,
+      "populationStudents": 15,
+      "pickupPoint": "Arakeshwar Temple Bus Stop"
+    },
+    {
+      "id": "c_pes_mandya",
+      "name": "PES Engineering & Degree College, Mandya",
+      "kind": "college",
+      "lat": 12.5218,
+      "lng": 76.8951,
+      "populationStudents": 0,
+      "pickupPoint": "PES Campus North Gate"
+    },
+    {
+      "id": "c_gfgc_maddur",
+      "name": "Govt First Grade College, Maddur",
+      "kind": "college",
+      "lat": 12.5931,
+      "lng": 77.0512,
+      "populationStudents": 0,
+      "pickupPoint": "GFGC Academic Block Gate"
+    },
+    {
+      "id": "c_maharaja_mysuru",
+      "name": "Maharaja's College, Mysuru",
+      "kind": "college",
+      "lat": 12.3095,
+      "lng": 76.6442,
+      "populationStudents": 0,
+      "pickupPoint": "Yuvaraja-Maharaja Transit Bay"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "v_halaguru",
+      "to": "v_malavalli",
+      "distanceKm": 18.2,
+      "baseTimeMin": 26,
+      "roadQuality": "rural",
+      "blocked": false,
+      "congestionFactor": 1.05
+    },
+    {
+      "id": "e2",
+      "from": "v_malavalli",
+      "to": "v_kirugavalu",
+      "distanceKm": 10.4,
+      "baseTimeMin": 15,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1
+    },
+    {
+      "id": "e3",
+      "from": "v_kirugavalu",
+      "to": "j_guthalu",
+      "distanceKm": 12.5,
+      "baseTimeMin": 18,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.12
+    },
+    {
+      "id": "e4",
+      "from": "j_guthalu",
+      "to": "c_pes_mandya",
+      "distanceKm": 6.2,
+      "baseTimeMin": 11,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.18
+    },
+    {
+      "id": "e5",
+      "from": "v_kirugavalu",
+      "to": "v_bannur",
+      "distanceKm": 21,
+      "baseTimeMin": 30,
+      "roadQuality": "rural",
+      "blocked": false,
+      "congestionFactor": 1.05
+    },
+    {
+      "id": "e6",
+      "from": "v_malavalli",
+      "to": "v_bannur",
+      "distanceKm": 24.5,
+      "baseTimeMin": 34,
+      "roadQuality": "rural",
+      "blocked": false,
+      "congestionFactor": 1.02
+    },
+    {
+      "id": "e7",
+      "from": "v_bannur",
+      "to": "j_arakeshwar",
+      "distanceKm": 14.8,
+      "baseTimeMin": 22,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.08
+    },
+    {
+      "id": "e8",
+      "from": "j_arakeshwar",
+      "to": "c_pes_mandya",
+      "distanceKm": 11.4,
+      "baseTimeMin": 17,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.1
+    },
+    {
+      "id": "e9",
+      "from": "v_bannur",
+      "to": "c_maharaja_mysuru",
+      "distanceKm": 26.2,
+      "baseTimeMin": 36,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.15
+    },
+    {
+      "id": "e10",
+      "from": "v_koppa",
+      "to": "v_maddur",
+      "distanceKm": 11.6,
+      "baseTimeMin": 16,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.04
+    },
+    {
+      "id": "e11",
+      "from": "v_maddur",
+      "to": "c_gfgc_maddur",
+      "distanceKm": 3.1,
+      "baseTimeMin": 6,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.1
+    },
+    {
+      "id": "e12",
+      "from": "v_maddur",
+      "to": "j_guthalu",
+      "distanceKm": 16.4,
+      "baseTimeMin": 21,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.14
+    },
+    {
+      "id": "e13",
+      "from": "v_koppa",
+      "to": "c_pes_mandya",
+      "distanceKm": 17.8,
+      "baseTimeMin": 25,
+      "roadQuality": "rural",
+      "blocked": false,
+      "congestionFactor": 1.06
+    },
+    {
+      "id": "e14",
+      "from": "v_pandavapura",
+      "to": "c_pes_mandya",
+      "distanceKm": 25,
+      "baseTimeMin": 34,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.12
+    },
+    {
+      "id": "e15",
+      "from": "v_pandavapura",
+      "to": "v_srirangapatna",
+      "distanceKm": 9.8,
+      "baseTimeMin": 14,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.08
+    },
+    {
+      "id": "e16",
+      "from": "v_srirangapatna",
+      "to": "j_arakeshwar",
+      "distanceKm": 18,
+      "baseTimeMin": 24,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.1
+    },
+    {
+      "id": "e17",
+      "from": "v_srirangapatna",
+      "to": "c_maharaja_mysuru",
+      "distanceKm": 16.5,
+      "baseTimeMin": 23,
+      "roadQuality": "paved",
+      "blocked": false,
+      "congestionFactor": 1.2
+    },
+    {
+      "id": "e18",
+      "from": "v_halaguru",
+      "to": "v_maddur",
+      "distanceKm": 27.5,
+      "baseTimeMin": 38,
+      "roadQuality": "rural",
+      "blocked": false,
+      "congestionFactor": 1
+    }
+  ],
+  "buses": [
+    {
+      "id": "bus_1",
+      "busNumber": "KA-11-F-0412",
+      "routeId": "corridor_malavalli_mandya",
+      "routeName": "Malavalli – Kirugavalu – PES Mandya",
+      "capacity": 52,
+      "occupiedSeats": 41,
+      "currentNodeId": "v_kirugavalu",
+      "destinationNodeId": "c_pes_mandya",
+      "lat": 12.49434,
+      "lng": 76.9429,
+      "etaMinutes": 24,
+      "status": "On Time",
+      "isSimulatedGps": true,
+      "driverName": "Basavaraju M.",
+      "driverPhone": "+91 94482 11904",
+      "assignedVillageIds": [
+        "v_malavalli",
+        "v_kirugavalu"
+      ],
+      "pathNodeIds": [
+        "v_malavalli",
+        "v_kirugavalu",
+        "j_guthalu",
+        "c_pes_mandya"
+      ],
+      "progressIndex": 1,
+      "nextStops": [
+        {
+          "nodeId": "j_guthalu",
+          "name": "Guthalu Junction",
+          "etaMin": 14
+        },
+        {
+          "nodeId": "c_pes_mandya",
+          "name": "PES College, Mandya",
+          "etaMin": 24
+        }
+      ]
+    },
+    {
+      "id": "bus_2",
+      "busNumber": "KA-11-F-0887",
+      "routeId": "corridor_halaguru_mandya",
+      "routeName": "Halaguru – Malavalli – PES Mandya",
+      "capacity": 50,
+      "occupiedSeats": 50,
+      "currentNodeId": "v_malavalli",
+      "destinationNodeId": "c_pes_mandya",
+      "lat": 12.43843,
+      "lng": 77.02256,
+      "etaMinutes": 39,
+      "status": "Delayed",
+      "delayReason": "Heavy morning fog & road resurfacing near Halaguru Cross (+14 min)",
+      "isSimulatedGps": true,
+      "driverName": "Siddaraju K.",
+      "driverPhone": "+91 94482 33219",
+      "assignedVillageIds": [
+        "v_halaguru",
+        "v_malavalli"
+      ],
+      "pathNodeIds": [
+        "v_halaguru",
+        "v_malavalli",
+        "v_kirugavalu",
+        "j_guthalu",
+        "c_pes_mandya"
+      ],
+      "progressIndex": 1,
+      "nextStops": [
+        {
+          "nodeId": "v_kirugavalu",
+          "name": "Kirugavalu",
+          "etaMin": 15
+        },
+        {
+          "nodeId": "j_guthalu",
+          "name": "Guthalu Junction",
+          "etaMin": 29
+        },
+        {
+          "nodeId": "c_pes_mandya",
+          "name": "PES College, Mandya",
+          "etaMin": 39
+        }
+      ]
+    },
+    {
+      "id": "bus_3",
+      "busNumber": "KA-11-F-1104",
+      "routeId": "corridor_koppa_maddur",
+      "routeName": "Koppa – Maddur – GFGC Maddur",
+      "capacity": 46,
+      "occupiedSeats": 46,
+      "currentNodeId": "v_koppa",
+      "destinationNodeId": "c_gfgc_maddur",
+      "lat": 12.59025,
+      "lng": 77.03616,
+      "etaMinutes": 4,
+      "status": "On Time",
+      "isSimulatedGps": true,
+      "driverName": "Nagaraju S.",
+      "driverPhone": "+91 94489 44501",
+      "assignedVillageIds": [
+        "v_koppa",
+        "v_maddur"
+      ],
+      "pathNodeIds": [
+        "v_koppa",
+        "v_maddur",
+        "c_gfgc_maddur"
+      ],
+      "progressIndex": 0,
+      "nextStops": [
+        {
+          "nodeId": "v_maddur",
+          "name": "Maddur Rural",
+          "etaMin": 11
+        },
+        {
+          "nodeId": "c_gfgc_maddur",
+          "name": "GFGC Maddur",
+          "etaMin": 19
+        }
+      ]
+    },
+    {
+      "id": "bus_4",
+      "busNumber": "KA-09-F-2290",
+      "routeId": "corridor_bannur_mysuru",
+      "routeName": "Bannur – Srirangapatna – Mysuru",
+      "capacity": 54,
+      "occupiedSeats": 0,
+      "currentNodeId": "v_bannur",
+      "destinationNodeId": "c_maharaja_mysuru",
+      "lat": 12.3338,
+      "lng": 76.8606,
+      "etaMinutes": 0,
+      "status": "Cancelled",
+      "delayReason": "Hydraulic clutch fault at Bannur depot — alternative transport activated",
+      "isSimulatedGps": true,
+      "driverName": "Prakash V.",
+      "driverPhone": "+91 94481 90822",
+      "assignedVillageIds": [
+        "v_bannur",
+        "v_srirangapatna"
+      ],
+      "pathNodeIds": [
+        "v_bannur",
+        "c_maharaja_mysuru"
+      ],
+      "progressIndex": 0,
+      "nextStops": [
+        {
+          "nodeId": "c_maharaja_mysuru",
+          "name": "Maharaja's College, Mysuru",
+          "etaMin": 0
+        }
+      ]
+    },
+    {
+      "id": "bus_5",
+      "busNumber": "KA-11-F-0651",
+      "routeId": "corridor_pandavapura_mandya",
+      "routeName": "Pandavapura – Srirangapatna – PES Mandya",
+      "capacity": 48,
+      "occupiedSeats": 48,
+      "currentNodeId": "v_pandavapura",
+      "destinationNodeId": "c_pes_mandya",
+      "lat": 12.4315,
+      "lng": 76.68455,
+      "etaMinutes": 14,
+      "status": "On Time",
+      "isSimulatedGps": true,
+      "driverName": "Manjunath P.",
+      "driverPhone": "+91 94487 71200",
+      "assignedVillageIds": [
+        "v_pandavapura",
+        "v_srirangapatna"
+      ],
+      "pathNodeIds": [
+        "v_pandavapura",
+        "v_srirangapatna",
+        "j_arakeshwar",
+        "c_pes_mandya"
+      ],
+      "progressIndex": 0,
+      "nextStops": [
+        {
+          "nodeId": "v_srirangapatna",
+          "name": "Srirangapatna East",
+          "etaMin": 10
+        },
+        {
+          "nodeId": "j_arakeshwar",
+          "name": "Arakeshwar Cross",
+          "etaMin": 20
+        },
+        {
+          "nodeId": "c_pes_mandya",
+          "name": "PES College, Mandya",
+          "etaMin": 29
+        }
+      ]
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "pv_1",
+      "providerUserId": "u_provider_1",
+      "vehicleName": "Gramin Express Force Traveller",
+      "vehicleType": "Minibus",
+      "regNumber": "KA-11-C-4821",
+      "driverName": "Mahesh Kumar",
+      "driverPhone": "+91 99002 77341",
+      "verified": true,
+      "totalSeats": 16,
+      "availableSeats": 11,
+      "baseVillageId": "v_kirugavalu",
+      "lat": 12.448,
+      "lng": 77.011,
+      "costPerKm": 3.2,
+      "baseFare": 15,
+      "safetyRating": 4.9,
+      "available": true,
+      "assignedRoute": "Kirugavalu – Guthalu – PES Mandya",
+      "tripStatus": "Boarding"
+    },
+    {
+      "id": "pv_2",
+      "providerUserId": "u_provider_2",
+      "vehicleName": "Cauvery Student Feeder Van",
+      "vehicleType": "Authorized Van",
+      "regNumber": "KA-09-D-9134",
+      "driverName": "Suresh Babu",
+      "driverPhone": "+91 98801 44129",
+      "verified": true,
+      "totalSeats": 10,
+      "availableSeats": 5,
+      "baseVillageId": "v_bannur",
+      "lat": 12.339,
+      "lng": 76.854,
+      "costPerKm": 3.5,
+      "baseFare": 18,
+      "safetyRating": 4.8,
+      "available": true,
+      "assignedRoute": "Bannur – Mysuru Bypass",
+      "tripStatus": "En Route"
+    },
+    {
+      "id": "pv_3",
+      "providerUserId": "u_provider_3",
+      "vehicleName": "Maddur Rural Cooperative Auto",
+      "vehicleType": "Shared Auto",
+      "regNumber": "KA-11-A-7720",
+      "driverName": "Kempegowda R.",
+      "driverPhone": "+91 97401 33981",
+      "verified": true,
+      "totalSeats": 5,
+      "availableSeats": 4,
+      "baseVillageId": "v_maddur",
+      "lat": 12.587,
+      "lng": 77.041,
+      "costPerKm": 4,
+      "baseFare": 12,
+      "safetyRating": 4.7,
+      "available": true,
+      "assignedRoute": "Koppa – Maddur – GFGC",
+      "tripStatus": "Standby"
+    },
+    {
+      "id": "pv_4",
+      "providerUserId": "u_provider_4",
+      "vehicleName": "Malavalli Youth Shuttle Van",
+      "vehicleType": "School Feeder",
+      "regNumber": "KA-11-B-3056",
+      "driverName": "Puttaraju N.",
+      "driverPhone": "+91 98455 62811",
+      "verified": true,
+      "totalSeats": 14,
+      "availableSeats": 9,
+      "baseVillageId": "v_malavalli",
+      "lat": 12.388,
+      "lng": 77.054,
+      "costPerKm": 2.9,
+      "baseFare": 14,
+      "safetyRating": 4.9,
+      "available": true,
+      "assignedRoute": "Malavalli – Kirugavalu – Mandya",
+      "tripStatus": "Boarding"
+    }
+  ],
+  "carpools": [
+    {
+      "id": "cp_fc4fd4",
+      "title": "Kirugavalu Noon Shuttle Pool",
+      "mode": "Bikepool",
+      "originVillageId": "v_kirugavalu",
+      "originName": "Kirugavalu",
+      "destinationCollegeId": "c_pes_mandya",
+      "destinationName": "PES Engineering & Degree College, Mandya",
+      "pickupLandmark": "Kirugavalu Main Circle Shelter",
+      "departureTime": "07:50",
+      "maxSeats": 4,
+      "memberIds": [
+        "u_student_1"
+      ],
+      "memberNames": [
+        "Ananya Gowda"
+      ],
+      "verifiedCount": 1,
+      "estimatedCostPerStudentInr": 20,
+      "createdBy": "Ananya Gowda",
+      "safetyNote": "College ID verified · Parent emergency contact check-in enabled"
+    },
+    {
+      "id": "cp_1",
+      "title": "Kirugavalu Morning Engineering Riders",
+      "mode": "Bikepool",
+      "originVillageId": "v_kirugavalu",
+      "originName": "Kirugavalu",
+      "destinationCollegeId": "c_pes_mandya",
+      "destinationName": "PES Engineering & Degree College, Mandya",
+      "pickupLandmark": "Kirugavalu Milk Dairy Gate",
+      "departureTime": "07:45",
+      "maxSeats": 4,
+      "memberIds": [
+        "u_student_1",
+        "s_2"
+      ],
+      "memberNames": [
+        "Ananya Gowda",
+        "Darshan K."
+      ],
+      "verifiedCount": 2,
+      "estimatedCostPerStudentInr": 18,
+      "createdBy": "Ananya Gowda",
+      "safetyNote": "College ID verified · Live emergency contact check-in enabled"
+    },
+    {
+      "id": "cp_2",
+      "title": "Bannur to Mysuru Degree Batch Pool",
+      "mode": "Carpool",
+      "originVillageId": "v_bannur",
+      "originName": "Bannur",
+      "destinationCollegeId": "c_maharaja_mysuru",
+      "destinationName": "Maharaja's College, Mysuru",
+      "pickupLandmark": "Bannur Old Market Arch",
+      "departureTime": "08:00",
+      "maxSeats": 5,
+      "memberIds": [
+        "s_3",
+        "s_4",
+        "s_5"
+      ],
+      "memberNames": [
+        "Kavya S.",
+        "Harish M.",
+        "Nandini B."
+      ],
+      "verifiedCount": 3,
+      "estimatedCostPerStudentInr": 25,
+      "createdBy": "Kavya S.",
+      "safetyNote": "Verified parent contact & college ID on file"
+    },
+    {
+      "id": "cp_3",
+      "title": "Koppa–Maddur Morning Science Pool",
+      "mode": "Carpool",
+      "originVillageId": "v_koppa",
+      "originName": "Koppa",
+      "destinationCollegeId": "c_gfgc_maddur",
+      "destinationName": "Govt First Grade College, Maddur",
+      "pickupLandmark": "Koppa Sugar Factory Cross",
+      "departureTime": "08:15",
+      "maxSeats": 4,
+      "memberIds": [
+        "s_6"
+      ],
+      "memberNames": [
+        "Rohan Patil"
+      ],
+      "verifiedCount": 1,
+      "estimatedCostPerStudentInr": 15,
+      "createdBy": "Rohan Patil",
+      "safetyNote": "Verified student ID · Daytime corridor"
+    }
+  ],
+  "rideRequests": [
+    {
+      "id": "rs_767832",
+      "studentId": "u_student_1",
+      "studentName": "Ananya Gowda",
+      "originVillageId": "v_bannur",
+      "originName": "Bannur",
+      "destinationCollegeId": "c_maharaja_mysuru",
+      "destinationName": "Maharaja's College, Mysuru",
+      "passengerCount": 2,
+      "pickupPoint": "Bannur Old Market Arch",
+      "preferredVehicleId": "pv_2",
+      "vehicleName": "Cauvery Student Feeder Van",
+      "driverName": "Suresh Babu",
+      "regNumber": "KA-09-D-9134",
+      "sharedFarePerStudentInr": 47,
+      "etaMinutes": 6,
+      "status": "En Route",
+      "emergencySharedWith": "+91 98451 00112 (Father)",
+      "createdAt": "2026-11-13T06:19:18.737Z"
+    },
+    {
+      "id": "rs_1",
+      "studentId": "s_7",
+      "studentName": "Meghana H.",
+      "originVillageId": "v_bannur",
+      "originName": "Bannur",
+      "destinationCollegeId": "c_maharaja_mysuru",
+      "destinationName": "Maharaja's College, Mysuru",
+      "passengerCount": 3,
+      "pickupPoint": "Bannur Old Market Arch",
+      "preferredVehicleId": "pv_2",
+      "vehicleName": "Cauvery Student Feeder Van",
+      "driverName": "Suresh Babu",
+      "regNumber": "KA-09-D-9134",
+      "sharedFarePerStudentInr": 32,
+      "etaMinutes": 9,
+      "status": "Pending",
+      "emergencySharedWith": "+91 98450 31290",
+      "createdAt": "2026-11-13T06:06:09.440Z"
+    },
+    {
+      "id": "rs_2",
+      "studentId": "u_student_1",
+      "studentName": "Ananya Gowda",
+      "originVillageId": "v_kirugavalu",
+      "originName": "Kirugavalu",
+      "destinationCollegeId": "c_pes_mandya",
+      "destinationName": "PES Engineering & Degree College, Mandya",
+      "passengerCount": 2,
+      "pickupPoint": "Kirugavalu Main Circle Shelter",
+      "preferredVehicleId": "pv_1",
+      "vehicleName": "Gramin Express Force Traveller",
+      "driverName": "Mahesh Kumar",
+      "regNumber": "KA-11-C-4821",
+      "sharedFarePerStudentInr": 22,
+      "etaMinutes": 6,
+      "status": "Accepted",
+      "emergencySharedWith": "+91 98451 00112",
+      "createdAt": "2026-11-13T05:50:09.440Z"
+    }
+  ],
+  "transportRequests": [
+    {
+      "id": "tr_1",
+      "studentId": "u_student_1",
+      "studentName": "Ananya Gowda",
+      "villageId": "v_kirugavalu",
+      "villageName": "Kirugavalu",
+      "collegeId": "c_pes_mandya",
+      "collegeName": "PES Engineering & Degree College, Mandya",
+      "departureTime": "07:45",
+      "needsAlternative": false,
+      "status": "Matched",
+      "assignedBusNumber": "KA-11-F-0412",
+      "createdAt": "2026-11-13T04:48:09.440Z"
+    },
+    {
+      "id": "tr_2",
+      "studentId": "s_8",
+      "studentName": "Chethan V.",
+      "villageId": "v_bannur",
+      "villageName": "Bannur",
+      "collegeId": "c_maharaja_mysuru",
+      "collegeName": "Maharaja's College, Mysuru",
+      "departureTime": "08:00",
+      "needsAlternative": true,
+      "status": "Reassigned",
+      "assignedBusNumber": "Cauvery Student Feeder Van",
+      "createdAt": "2026-11-13T05:33:09.440Z"
+    },
+    {
+      "id": "tr_3",
+      "studentId": "s_9",
+      "studentName": "Pooja R.",
+      "villageId": "v_halaguru",
+      "villageName": "Halaguru",
+      "collegeId": "c_pes_mandya",
+      "collegeName": "PES Engineering & Degree College, Mandya",
+      "departureTime": "07:15",
+      "needsAlternative": false,
+      "status": "Reassigned",
+      "createdAt": "2026-11-13T05:58:09.440Z",
+      "assignedBusNumber": "KA-11-F-0887"
+    }
+  ],
+  "notifications": [
+    {
+      "dedupKey": "exam_crisis:u_student_1:2026-11-13T06:56:57.259Z",
+      "userId": "u_student_1",
+      "kind": "route_disruption",
+      "severity": "critical",
+      "title": "Exam Day Crisis: B.E. / B.Sc. Semester Examination in 95 min",
+      "message": "2 government buses offline, +40% demand surge, and road flooding active. Fallback: Gramin Express Minibus (16 seats) + A* Detour.",
+      "actionTab": "alternatives",
+      "actionLabel": "View Backup Transport",
+      "id": "notif_exam_crisis_u_student_1_2026-11-13T06_56_57_259Z",
+      "read": false,
+      "createdAt": "2026-11-13T06:56:57.267Z"
+    },
+    {
+      "dedupKey": "bus_disruption:u_student_1:bus_1:Cancelled:Exam Day Technical Breakdown: Alternator & cooling fault near Kirugavalu — backup vans & carpools dispatched",
+      "userId": "u_student_1",
+      "kind": "route_disruption",
+      "severity": "critical",
+      "title": "Assigned bus KA-11-F-0412 cancelled",
+      "message": "Exam Day Technical Breakdown: Alternator & cooling fault near Kirugavalu — backup vans & carpools dispatched",
+      "busNumber": "KA-11-F-0412",
+      "actionTab": "alternatives",
+      "actionLabel": "View Alternative Transport",
+      "id": "notif_bus_disruption_u_student_1_bus_1_Cancelled_Exam_Day_Technical_Breakdown__Alternator___cooling_fault_near_Kirugavalu___backup_vans___carpools_dispatched",
+      "read": false,
+      "createdAt": "2026-11-13T06:55:34.416Z"
+    },
+    {
+      "dedupKey": "road_disruption:u_student_1:e2",
+      "userId": "u_student_1",
+      "kind": "route_disruption",
+      "severity": "critical",
+      "title": "Route disruption: Malavalli ↔ Kirugavalu blocked",
+      "message": "A road closure affects your corridor. Open AI Route Optimizer for an active A* detour or check alternative transport.",
+      "busNumber": "KA-11-F-0412",
+      "actionTab": "optimizer",
+      "actionLabel": "Open Detour Route",
+      "id": "notif_road_disruption_u_student_1_e2",
+      "read": false,
+      "createdAt": "2026-11-13T06:55:34.416Z"
+    },
+    {
+      "dedupKey": "exam_crisis:u_student_1:2026-11-13T06:55:34.416Z",
+      "userId": "u_student_1",
+      "kind": "route_disruption",
+      "severity": "critical",
+      "title": "Exam Day Crisis: B.E. / B.Sc. Semester Examination in 95 min",
+      "message": "2 government buses offline, +40% demand surge, and road flooding active. Fallback: Gramin Express Minibus (16 seats) + A* Detour.",
+      "actionTab": "alternatives",
+      "actionLabel": "View Backup Transport",
+      "id": "notif_exam_crisis_u_student_1_2026-11-13T06_55_34_416Z",
+      "read": false,
+      "createdAt": "2026-11-13T06:55:34.416Z"
+    },
+    {
+      "dedupKey": "road_disruption:u_student_1:e3",
+      "userId": "u_student_1",
+      "kind": "route_disruption",
+      "severity": "critical",
+      "title": "Route disruption: Kirugavalu ↔ Guthalu Junction blocked",
+      "message": "A road closure affects your corridor. Open AI Route Optimizer for an active A* detour or check alternative transport.",
+      "busNumber": "KA-11-F-0412",
+      "actionTab": "optimizer",
+      "actionLabel": "Open Detour Route",
+      "id": "notif_road_disruption_u_student_1_e3",
+      "read": true,
+      "createdAt": "2026-11-13T06:31:59.409Z"
+    },
+    {
+      "dedupKey": "arrival_10min:u_student_1:bus_1:1",
+      "userId": "u_student_1",
+      "kind": "arrival_10min",
+      "severity": "warning",
+      "title": "Bus KA-11-F-0412 arriving in 9 min",
+      "message": "Head to Kirugavalu Main Circle Shelter. 0 seated spot(s) available on Malavalli – Kirugavalu – PES Mandya.",
+      "busNumber": "KA-11-F-0412",
+      "actionTab": "tracker",
+      "actionLabel": "Track Bus",
+      "id": "notif_arrival_10min_u_student_1_bus_1_1",
+      "read": true,
+      "createdAt": "2026-11-13T06:30:06.202Z"
+    }
+  ],
+  "examCrisis": {
+    "active": false,
+    "demandSurgeMultiplier": 1,
+    "brokenBusIds": [],
+    "floodedEdgeId": "e2",
+    "examWindowMinutes": 105,
+    "urgentCohorts": [],
+    "summaryNote": "Normal weekday operations across Mandya–Mysuru rural corridors."
+  }
+}
